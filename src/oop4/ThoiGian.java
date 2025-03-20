@@ -26,6 +26,6 @@ public class ThoiGian {
         this.giay = giay;
     }
     void  output(){
-        System.out.printf("%d giờ %d phút %d giây",this.gio,this.phut,this.giay);
+        System.out.printf("%d:%d:%d",this.gio,this.phut,this.giay);
     }
 }
