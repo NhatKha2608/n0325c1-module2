@@ -26,4 +26,9 @@ public class NewPhone extends Phone {
         super.output();
         System.out.println("Số lượng: " + this.quantity);
     }
+
+    @Override
+    public double calculateTotalPrice() {
+        return getPrice() * quantity;
+    }
 }

@@ -2,7 +2,7 @@ package ss4;
 
 import java.util.Scanner;
 
-public class Phone {
+public abstract class Phone {
     private String id;
     private String name;
     private double price;
@@ -86,4 +86,6 @@ public class Phone {
 
         System.out.println("Nhập hãng sản xuất: " + this.manufacturer);
     }
+
+    public abstract double calculateTotalPrice();
 }
