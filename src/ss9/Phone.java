@@ -1,4 +1,6 @@
-package ss4;
+package ss9;
+
+import ss9.validation.PhoneValidation;
 
 import java.util.Scanner;
 
@@ -66,18 +68,10 @@ public abstract class Phone implements Comparable<Phone> {
     }
 
     void input() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập tên điện thoại: ");
-        name = scanner.nextLine();
-
-        System.out.print("Nhập vào giá bán: ");
-        price = Double.parseDouble(scanner.nextLine());
-
-        System.out.print("Nhập vào thời gian bảo hành: ");
-        warranty = Integer.parseInt(scanner.nextLine());
-
-        System.out.print("Nhập hãng sản xuất: ");
-        manufacturer = scanner.nextLine();
+        this.name = PhoneValidation.inputName("Tên điện thoại");
+        this.price = PhoneValidation.inputPrice("Giá bán");
+        this.warranty = PhoneValidation.inputWarranty("Thời gian bảo hành");
+        this.manufacturer = PhoneValidation.inputManufacturer("Hãng sản xuất");
     }
 
     void output() {
