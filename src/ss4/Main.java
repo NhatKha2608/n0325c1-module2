@@ -45,6 +45,7 @@ public class Main {
                     break;
                 case 4:
                     delete();
+                    break;
                 case 5:
                     menuSort();
                     break;
